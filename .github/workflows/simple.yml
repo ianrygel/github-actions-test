@@ -17,5 +17,13 @@ jobs:
         run: | 
           import platform
           print(platform.processor())
-          print(platform.java_ver())
         shell: python
+  run-window-command:
+    runs-on: windows-latest
+    environment: test
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash
